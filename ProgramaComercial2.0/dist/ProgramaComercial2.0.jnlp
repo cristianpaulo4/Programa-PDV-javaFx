@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ProgramaComercial2.0.jnlp">
+  <information>
+    <title>ProgramaComercial2.0</title>
+    <vendor>bx</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ProgramaComercial2.0.jar" size="449759" download="eager" />
+    <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib/sqlite-jdbc-3.7.2.jar" size="3201133" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ProgramaComercial2.0" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="programaHome.ProgramaComercial20"  name="ProgramaComercial2.0" />
+  <update check="always"/>
+</jnlp>

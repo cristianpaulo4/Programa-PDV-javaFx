@@ -1,0 +1,43 @@
+
+
+
+.botao{
+    -fx-background-color: transparent
+}
+
+
+.botao:hover{
+    -fx-background-color: #B7B7B7
+}
+
+.botao:pressed{    
+    -fx-background-color: #E2E2E2
+}
+
+.botaoRelatorio{
+    -fx-background-color: transparent
+}
+
+
+.botaoRelatorio:hover{
+    -fx-background-color: #000000
+}
+
+.botaoRelatorio:pressed{
+    -fx-background-color: #BCBCBC
+}
+
+.botaoFinalizar:hover{
+    -fx-background-color: #003B42        
+}
+.botaoFinalizar:hover{
+    -fx-background-color: transparent  
+}
+
+
+.botao2{
+    -fx-arc-width: 132;
+    -fx-arc-height: 35;
+    -fx-background-radius: 20;
+      
+}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="1128.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaRepresentante.TelaRepresentanteController">
+   <children>
+      <HBox alignment="CENTER" layoutX="28.0" layoutY="34.0" prefHeight="45.0" prefWidth="1128.0" style="-fx-background-color: #DDDDDD;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Representante" textFill="#464646">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="24.16" radius="5.54" width="0.0" />
+         </effect>
+      </HBox>
+      <SplitPane dividerPositions="0.38188277087033745" layoutX="430.0" layoutY="47.0" prefHeight="560.0" prefWidth="1128.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tabRepresentante" layoutX="82.0" layoutY="116.0" onMouseClicked="#carregarDetalhes" onSort="#carregarDetalhes" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+                    <columns>
+                      <TableColumn fx:id="coluNome" prefWidth="75.0" text="Nome" />
+                      <TableColumn fx:id="coluTelefone" prefWidth="75.0" text="Telefone" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <contextMenu>
+                        <ContextMenu autoFix="false" autoHide="false" consumeAutoHidingEvents="false" hideOnEscape="false">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Editar" />
+                              <MenuItem mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+                              <MenuItem mnemonicParsing="false" text="Sair" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+                  <GridPane layoutX="-17.0" layoutY="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="13.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <TextField HBox.hgrow="SOMETIMES" />
+                              <Button mnemonicParsing="false" text="Buscar">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pesquisar:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Separator layoutX="27.0" layoutY="77.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
+                  <Label layoutX="14.0" layoutY="14.0" text="Detalhes:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="57.0" layoutY="107.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+                     <children>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
+                              <TextField fx:id="cxNome" editable="false" focusTraversable="false" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone 1:" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone 2:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <TextField fx:id="cxTel1" editable="false" focusTraversable="false" GridPane.rowIndex="3" />
+                              <TextField fx:id="cxTel2" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail:" />
+                              <TextField fx:id="cxEmail" editable="false" focusTraversable="false" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Empresa:" GridPane.rowIndex="2" />
+                              <TextField fx:id="cxEmpresa" editable="false" focusTraversable="false" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

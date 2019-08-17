@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="1128.0" stylesheets="@../CSS/CSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaDebito.TelaDebitoController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="1128.0" style="-fx-background-color: #DDDDDD;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Debitos em Aberto" textFill="#464646">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="24.16" radius="5.54" width="0.0" />
+         </effect>
+      </HBox>
+      <AnchorPane layoutX="10.0" layoutY="141.0" minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="1128.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <SplitPane dividerPositions="0.2815" layoutX="124.0" layoutY="104.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="526.0" prefWidth="301.0">
+                     <children>
+                        <TableView fx:id="tabCliente" layoutX="27.0" layoutY="96.0" onMouseClicked="#carregarDebitos" prefHeight="410.0" prefWidth="293.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="96.0">
+                           <columns>
+                              <TableColumn fx:id="coluCliente" prefWidth="75.0" text="Lista de Clientes" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <GridPane layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Pesquisar:">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
+                                 <children>
+                                    <TextField fx:id="cxBuscar" promptText="Digite o nome" HBox.hgrow="SOMETIMES">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="526.0" prefWidth="816.0">
+                     <children>
+                        <Separator layoutY="80.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+                        <SplitPane dividerPositions="0.6787048567870486" layoutX="251.0" layoutY="83.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView fx:id="tabProduto" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="14.0">
+                                       <columns>
+                                          <TableColumn fx:id="coluCodigo" prefWidth="75.0" text="Codigo" />
+                                          <TableColumn fx:id="coluProduto" prefWidth="75.0" text="Produtos" />
+                                          <TableColumn fx:id="coluQuant" prefWidth="75.0" text="Quantidade" />
+                                          <TableColumn fx:id="coluValor" prefWidth="75.0" text="Valor" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.29411764705882354" layoutX="64.0" layoutY="79.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <AnchorPane maxHeight="130.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             <children>
+                                                <VBox alignment="CENTER" layoutX="76.0" layoutY="124.0" prefHeight="167.0" prefWidth="236.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <GridPane prefHeight="141.0" prefWidth="236.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label text="Total do Debito " GridPane.halignment="LEFT">
+                                                               <GridPane.margin>
+                                                                  <Insets left="5.0" />
+                                                               </GridPane.margin>
+                                                               <font>
+                                                                  <Font size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                               <children>
+                                                                  <Label prefHeight="72.0" prefWidth="78.0" text="R$:">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="50.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="lblDebito" text="00.00" textFill="#030303">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="50.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             <children>
+                                                <VBox alignment="CENTER" layoutX="75.0" layoutY="-17.0" prefHeight="145.0" prefWidth="236.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <GridPane prefHeight="141.0" prefWidth="236.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="41.0" minHeight="7.0" prefHeight="7.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <Label text="Total do Haver:" GridPane.halignment="LEFT">
+                                                               <GridPane.margin>
+                                                                  <Insets left="5.0" />
+                                                               </GridPane.margin>
+                                                               <font>
+                                                                  <Font size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Separator prefWidth="200.0" GridPane.rowIndex="2" />
+                                                            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                               <children>
+                                                                  <Label text="R$:">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="50.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="lblHaver" text="00.00">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="50.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </VBox>
+                                                <HBox alignment="CENTER" layoutY="149.0" prefHeight="75.0" prefWidth="236.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#Pagar" prefHeight="53.0" prefWidth="1000.0" text="Pagar" HBox.hgrow="SOMETIMES">
+                                                         <font>
+                                                            <Font size="22.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" layoutX="5.0" layoutY="132.0" prefHeight="130.0" prefWidth="242.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="132.0">
+                                                   <children>
+                                                      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../icones/senunBG.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                        <GridPane layoutY="-8.0" maxHeight="54.0" prefHeight="54.0" prefWidth="805.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="437.0" minWidth="10.0" prefWidth="337.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.0" minWidth="10.0" prefWidth="160.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1000.0" minWidth="10.0" prefWidth="277.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Cliente:">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="cxNomeCliente" editable="false" focusTraversable="false" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <TextField fx:id="cxCPF" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço:" GridPane.columnIndex="2" />
+                              <TextField fx:id="cxEndereco" editable="false" maxHeight="1000.0" GridPane.columnIndex="2" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin></TextField>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <VBox fx:id="telaPagar" alignment="CENTER" layoutY="45.0" prefHeight="562.0" prefWidth="1128.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <AnchorPane id="AnchorPane" maxHeight="332.0" maxWidth="620.0" minHeight="332.0" minWidth="620.0" prefHeight="332.0" prefWidth="620.0" style="-fx-border-color: #118175;" stylesheets="@../CSS/CSS.css">
+               <children>
+                  <SplitPane dividerPositions="0.5" layoutX="68.0" layoutY="195.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="305.0">
+                           <children>
+                              <Pane layoutX="-13.0" prefHeight="145.0" prefWidth="305.0" style="-fx-background-color: #F2F2F2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <effect>
+                                    <DropShadow color="#727272" />
+                                 </effect>
+                                 <children>
+                                    <ImageView fitHeight="121.0" fitWidth="222.0" layoutX="48.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icones/senunBG.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Label layoutX="8.0" layoutY="152.0" text="Forma de pagamento:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="176.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <HBox layoutX="-1.0" layoutY="195.0" prefHeight="121.0" prefWidth="305.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botaoFinalizar">
+                                       <children>
+                                          <ImageView fitHeight="91.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icones/003-dinhe.png" />
+                                             </image>
+                                             <effect>
+                                                <DropShadow color="#909090" />
+                                             </effect>
+                                          </ImageView>
+                                          <RadioButton fx:id="dinheiro" mnemonicParsing="false" selected="true" text="Dinheiro">
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="formaPagamento" />
+                                             </toggleGroup>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="91.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icones/006-cartao.png" />
+                                             </image>
+                                             <effect>
+                                                <DropShadow color="#909090" />
+                                             </effect>
+                                          </ImageView>
+                                          <RadioButton fx:id="cartao" mnemonicParsing="false" text="Cartão" toggleGroup="$formaPagamento">
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="91.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icones/008-cheque.png" />
+                                             </image>
+                                             <effect>
+                                                <DropShadow color="#909090" />
+                                             </effect>
+                                          </ImageView>
+                                          <RadioButton fx:id="cheque" mnemonicParsing="false" text="Cheque" toggleGroup="$formaPagamento">
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <GridPane layoutX="14.0" layoutY="41.0" prefHeight="229.0" prefWidth="277.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="10.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="2.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="10.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="Total pago:" textFill="#16510e">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Troco:" textFill="#16510e" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="cxValorPago" onKeyReleased="#Troco" prefHeight="63.0" prefWidth="277.0" promptText="Digite o Valor Pago" style="-fx-background-radius: 0; -fx-background-color: transparente;" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="cxTrocoCliente" alignment="BOTTOM_LEFT" editable="false" prefHeight="63.0" prefWidth="277.0" promptText="Troco" style="-fx-background-radius: 0; -fx-background-color: transtaret;" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </TextField>
+                                    <Line endX="175.0" endY="0.5" startX="-100.0" stroke="#197915" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                                 </children>
+                              </GridPane>
+                              <Label layoutX="14.0" layoutY="14.0" text="Finalizar Compra:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="38.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <Button layoutX="159.0" layoutY="283.0" mnemonicParsing="false" onAction="#adicionarHaver" prefHeight="35.0" prefWidth="132.0" styleClass="botao2" text="Pagar">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="14.0" layoutY="283.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="35.0" prefWidth="132.0" styleClass="botao2" text="Cancelar">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Line endX="176.0" fill="BLACK" layoutX="115.0" layoutY="272.0" startX="-100.0" stroke="#197915" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="2.0" />
+                              <HBox alignment="CENTER_LEFT" layoutX="148.0" layoutY="4.0" prefHeight="36.0" prefWidth="132.0">
+                                 <children>
+                                    <Label text="R$:" textFill="#2713bf">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblTotal2" text="00.00" textFill="#2713bf">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

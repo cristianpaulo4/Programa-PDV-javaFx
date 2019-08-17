@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="1128.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaDeEstoque.TelaDeEstoqueController">
+   <children>
+      <SplitPane dividerPositions="0.5595026642984015" layoutX="447.0" layoutY="277.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tabProdutos" prefHeight="440.0" prefWidth="639.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="110.0">
+                     <columns>
+                        <TableColumn fx:id="colunCodigo" prefWidth="218.0" text="Código" />
+                        <TableColumn fx:id="colunDescricao" prefWidth="419.0" text="Descricão" />
+                        <TableColumn fx:id="colunCusto" prefWidth="419.0" text="Valor Custo" />
+                        <TableColumn fx:id="colunQuant" prefWidth="419.0" text="Quantidade" />
+                        <TableColumn fx:id="colunValidade" prefWidth="419.0" text="Validade" />
+                        <TableColumn fx:id="colunValorVenda" prefWidth="419.0" text="Valor Venda" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <contextMenu>
+                        <ContextMenu autoFix="false" autoHide="false" consumeAutoHidingEvents="false" hideOnEscape="false">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#editar" text="Editar" />
+                              <MenuItem fx:id="btnExcluir" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+                              <MenuItem mnemonicParsing="false" text="Sair" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+                  <GridPane layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <children>
+                              <TextField fx:id="cxBusca" promptText="Código" HBox.hgrow="SOMETIMES" />
+                           </children>
+                        </HBox>
+                        <ComboBox fx:id="cbTipo" prefWidth="1000.0" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label text="Tipo de Busca:" />
+                        <Label text="Pesquisar por Código:" GridPane.columnIndex="1" />
+                        <Label text="Pesquisar por Descrição:" GridPane.columnIndex="2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="cxBuscarNome" promptText="Descrição" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="503.0" prefWidth="492.0">
+               <children>
+                  <Label layoutX="10.0" layoutY="10.0" text="Detalhes:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="43.0" layoutY="39.0" prefHeight="511.0" prefWidth="472.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="39.0">
+                     <children>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Código:" />
+                              <Label text="Número da nota:" GridPane.columnIndex="1">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="cxCodigo" editable="false" GridPane.rowIndex="1" />
+                              <TextField fx:id="cxNumeroN" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Descrição:" />
+                              <TextField fx:id="cxDescricao" editable="false" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="15.0" prefHeight="20.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="15.0" prefHeight="20.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="15.0" prefHeight="20.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="15.0" prefHeight="20.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Marca:" />
+                              <Label text="Unidade Medida:" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin></Label>
+                              <TextField fx:id="cxMarca" editable="false" GridPane.rowIndex="1" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="cxUndMed" editable="false" prefWidth="1500.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="cxMed" editable="false" prefWidth="1500.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria:" GridPane.rowIndex="2" />
+                              <TextField fx:id="cxCategoria" editable="false" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Validade:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <TextField fx:id="cxValidade" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quant. Minimo:" GridPane.rowIndex="4" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <TextField fx:id="cxQuatMinimo" editable="false" GridPane.rowIndex="5" />
+                              <TextField fx:id="cxQuant" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Valor Custo:" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Valor Venda:" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <TextField fx:id="cxValorCusto" editable="false" GridPane.rowIndex="7" />
+                              <TextField fx:id="cxValorVenda" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fornecedor:" />
+                              <TextField fx:id="cxFornecedor" editable="false" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Observações:">
+                                 <GridPane.margin>
+                                    <Insets top="5.0" />
+                                 </GridPane.margin>
+                              </Text>
+                           </children>
+                        </GridPane>
+                        <TextArea fx:id="cxObs" editable="false" prefHeight="126.0" prefWidth="472.0" VBox.vgrow="SOMETIMES">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <HBox alignment="CENTER" minHeight="40.0" prefHeight="52.0" prefWidth="472.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Cancelar" HBox.hgrow="SOMETIMES" />
+                              <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Salvar" HBox.hgrow="SOMETIMES">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator layoutY="32.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <HBox alignment="CENTER" layoutX="8.0" layoutY="14.0" prefHeight="45.0" prefWidth="1128.0" style="-fx-background-color: #DDDDDD;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Estoque" textFill="#464646">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="24.16" radius="5.54" width="0.0" />
+         </effect>
+      </HBox>
+   </children>
+</AnchorPane>

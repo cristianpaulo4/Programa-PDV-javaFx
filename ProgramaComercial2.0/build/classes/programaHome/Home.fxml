@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="700.0" minWidth="1078.0" prefHeight="700.0" prefWidth="1078.0" stylesheets="@../CSS/CSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programaHome.Home">
+   <children>
+      <TabPane layoutX="8.0" layoutY="14.0" prefHeight="122.0" prefWidth="1078.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Utilitarios">
+               <content>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaVendas" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/028-caixa.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="VENDAS" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaCaixa" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/014-sacodinheiro.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="CAIXA" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/025-trocas.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="TROCAS" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/029-faturamento.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="CONTAS" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaDebito" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/031-fiado.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Á PRAZO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaEstoque" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/040-estoque.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="ESTOQUE" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaHistorico" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/043-historico-1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="HISTÓRICO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaRelatorio" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/003-graficos.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="RELATÓRIOS" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#fazerLogin" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/009-sair.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="SAIR" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+          <Tab text="Gestor">
+               <content>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="cadPro" alignment="BOTTOM_CENTER" onMouseClicked="#Nota" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/023-cadastro.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="PRODUTOS" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox fx:id="esto" alignment="BOTTOM_CENTER" onMouseClicked="#telaFornecedor" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/011-fornecedor.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="FONECEDOR" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaCliente" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/020-usuario.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="CLIENTE" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaNotas" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/005-impressora.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="NOTAS ENTRADA" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/015-porquinho.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="COBRANÇA" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaRepresentante" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/032-cotabilidade.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="REPRESENTANTES" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/037-gestor.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="GESTOR" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaBalanco" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/035-balanco.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="BALANÇO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab text="Pedidos">
+               <content>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/033-historico.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="EM ABERTO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/032-cotabilidade.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="null" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/038-pedidos.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="PEDIDOS" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/039-cotacao.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="COTAÇÃO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/041-semestoque.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="SEM ESTOQUE" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/039-cotacao.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="COTAÇÃO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/039-cotacao.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="COTAÇÃO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/039-cotacao.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="COTAÇÃO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/008-salvar.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="NULL" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab text="Administração">
+               <content>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" onMouseClicked="#telaVendedores" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/036-vendedores.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="VENDEDORES" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/032-cotabilidade.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="REPRESENTANTES" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/038-pedidos.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="PEDIDOS" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/039-cotacao.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="COTAÇÃO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/041-semestoque.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="SEM ESTOQUE" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/039-cotacao.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="COTAÇÃO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/039-cotacao.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="COTAÇÃO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/039-cotacao.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="COTAÇÃO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botao" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/001-config.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="CONFIGURAÇÃO" textFill="#155e2b">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Separator layoutX="53.0" layoutY="121.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="121.0" />
+      <Separator layoutX="23.0" layoutY="638.0" prefWidth="200.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label layoutX="13.0" layoutY="647.0" text="Programa de Vendas 2.0" textFill="#6f6f6f" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="13.0">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <StackPane fx:id="areaTrabalho" layoutX="13.0" layoutY="123.0" prefHeight="516.0" prefWidth="1078.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="123.0">
+         <children>
+            <Label text="Não Altorizado!">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+         </children></StackPane>
+   </children>
+</AnchorPane>

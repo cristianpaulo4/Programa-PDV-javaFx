@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="332.0" maxWidth="620.0" minHeight="332.0" minWidth="620.0" prefHeight="332.0" prefWidth="620.0" stylesheets="@../CSS/CSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCupom.TelaCupomController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="68.0" layoutY="195.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="305.0">
+               <children>
+                  <Pane layoutX="-13.0" prefHeight="145.0" prefWidth="305.0" style="-fx-background-color: #F2F2F2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <effect>
+                        <DropShadow color="#727272" />
+                     </effect>
+                     <children>
+                        <ImageView fitHeight="121.0" fitWidth="222.0" layoutX="48.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icones/senunBG.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="8.0" layoutY="152.0" text="Forma de pagamento:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutY="176.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <HBox layoutX="-1.0" layoutY="195.0" prefHeight="121.0" prefWidth="305.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="botaoFinalizar">
+                           <children>
+                              <ImageView fitHeight="91.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/003-dinhe.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow color="#909090" />
+                                 </effect>
+                              </ImageView>
+                              <RadioButton fx:id="dinheiro" mnemonicParsing="false" selected="true" text="Dinheiro">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="formaPagamento" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="91.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/006-cartao.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow color="#909090" />
+                                 </effect>
+                              </ImageView>
+                              <RadioButton fx:id="cartao" mnemonicParsing="false" text="Cartão" toggleGroup="$formaPagamento">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="91.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icones/008-cheque.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow color="#909090" />
+                                 </effect>
+                              </ImageView>
+                              <RadioButton fx:id="cheque" mnemonicParsing="false" text="Cheque" toggleGroup="$formaPagamento">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane layoutX="14.0" layoutY="41.0" prefHeight="229.0" prefWidth="277.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="10.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="2.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="10.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Total a pagar:" textFill="#16510e">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Troco:" textFill="#16510e" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cxValorPago" prefHeight="63.0" prefWidth="277.0" promptText="Digite o Valor Pago" style="-fx-background-radius: 0; -fx-background-color: transparente;" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                        <TextField alignment="BOTTOM_LEFT" editable="false" prefHeight="63.0" prefWidth="277.0" promptText="Troco" style="-fx-background-radius: 0; -fx-background-color: transtaret;" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="175.0" endY="0.5" startX="-100.0" stroke="#197915" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="14.0" layoutY="14.0" text="Finalizar Compra:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutY="38.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Button layoutX="159.0" layoutY="283.0" mnemonicParsing="false" onAction="#finalizar" prefHeight="35.0" prefWidth="132.0" text="Finalizar">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="132.0" text="Cancelar">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Line endX="176.0" fill="BLACK" layoutX="115.0" layoutY="272.0" startX="-100.0" stroke="#197915" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="2.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

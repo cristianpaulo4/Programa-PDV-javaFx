@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="1128.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaRelatorios.TelaRelatorioController">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="45.0" prefHeight="560.0" prefWidth="103.0" style="-fx-background-color: #282B2F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="13.0" layoutY="48.0" prefHeight="560.0" prefWidth="113.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="CENTER" cache="true" onMouseClicked="#RelaVendas" prefHeight="91.0" prefWidth="100.0" styleClass="botaoRelatorio" stylesheets="@../CSS/CSS.css" VBox.vgrow="SOMETIMES">
+                     <children>
+                        <ImageView blendMode="ADD" fitHeight="64.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icones/002-caixa.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Vendas" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+                  <VBox alignment="CENTER" cache="true" onMouseClicked="#RelaSaida" prefHeight="91.0" prefWidth="100.0" styleClass="botaoRelatorio" stylesheets="@../CSS/CSS.css" VBox.vgrow="SOMETIMES">
+                     <children>
+                        <ImageView blendMode="ADD" fitHeight="64.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icones/003-carteiras.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Saída" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+                  <VBox alignment="CENTER" cache="true" prefHeight="91.0" prefWidth="100.0" styleClass="botaoRelatorio" stylesheets="@../CSS/CSS.css" VBox.vgrow="SOMETIMES">
+                     <children>
+                        <ImageView blendMode="ADD" fitHeight="64.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icones/004-vendedores.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Vendedor" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+                  <VBox alignment="CENTER" cache="true" prefHeight="91.0" prefWidth="100.0" styleClass="botaoRelatorio" stylesheets="@../CSS/CSS.css" VBox.vgrow="SOMETIMES">
+                     <children>
+                        <ImageView blendMode="ADD" fitHeight="64.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icones/005-caminhao.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Vendedor" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+                  <VBox alignment="CENTER" cache="true" prefHeight="91.0" prefWidth="100.0" styleClass="botaoRelatorio" stylesheets="@../CSS/CSS.css" VBox.vgrow="SOMETIMES">
+                     <children>
+                        <ImageView blendMode="ADD" fitHeight="64.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icones/001-graficos.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Vendedor" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+                  <VBox alignment="CENTER" cache="true" prefHeight="91.0" prefWidth="100.0" styleClass="botaoRelatorio" stylesheets="@../CSS/CSS.css" VBox.vgrow="SOMETIMES">
+                     <children>
+                        <ImageView blendMode="ADD" fitHeight="64.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icones/006-cartao.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Vendedor" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="RelatorioSaida" layoutX="117.0" layoutY="57.0" prefHeight="560.0" prefWidth="1021.0" style="-fx-background-color: #F4F4F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <Separator layoutX="689.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="326.0" AnchorPane.topAnchor="0.0" />
+            <DatePicker layoutX="784.0" layoutY="14.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="14.0" />
+            <PieChart fx:id="grafPizza" layoutX="88.0" layoutY="80.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="433.0" AnchorPane.topAnchor="80.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="RelatorioVenda" layoutX="107.0" layoutY="47.0" prefHeight="560.0" prefWidth="1021.0" style="-fx-background-color: #F4F4F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <LineChart fx:id="grafico" layoutX="14.0" layoutY="51.0" prefHeight="459.0" prefWidth="588.0" title="Gráfico de Vendas Por Mês" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="383.0" AnchorPane.topAnchor="51.0">
+              <xAxis>
+                <CategoryAxis fx:id="categoria" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="numero" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Separator layoutX="689.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="326.0" AnchorPane.topAnchor="0.0" />
+            <DatePicker layoutX="784.0" layoutY="14.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="14.0" />
+         </children></AnchorPane>
+      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="1128.0" style="-fx-background-color: #DDDDDD;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Relatórios" textFill="#464646">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="24.16" radius="5.54" width="0.0" />
+         </effect>
+      </HBox>
+   </children>
+</AnchorPane>
