@@ -1,6 +1,6 @@
 Obrigado pela visita!
 
-Sistema comercial de vendas, desenvolvido em javafx lembrando que não foi concluido
-e como foi desenvolvido no meu decorrer da minha aprendizagem, por isso, algumas 
-parte doperão ser obsoletas considerando meu conhecimento atual.
+Sistema comercial de vendas, desenvolvido em javafx lembrando que não foi concluido.
+E como foi desenvolvido no meu decorrer da minha aprendizagem, por isso, alguns 
+trechos de codigos poderão ser obsoletas considerando meu conhecimento atual.
 
